@@ -15,7 +15,13 @@ else
         <thead>
             <tr>
                 <th>
-                    Customers
+                    Customer Name
+                </th>
+                <th>
+                    SingUp Fee
+                </th>
+                <th>
+                    Membership Name
                 </th>
             </tr>
         </thead>
@@ -25,6 +31,12 @@ else
                 <tr>
                     <td>
                         @Html.ActionLink(customer.Name, "Detail", "Customer",new { Id = customer.Id},null)
+                    </td>
+                    <td>
+                        @customer.MembershipType.SignUpFee
+                    </td>
+                    <td>
+                        @customer.MembershipType.Name
                     </td>
                 </tr>
             }
