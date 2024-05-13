@@ -14,16 +14,20 @@ namespace Vidly.Models
         public string Name { get; set; }
         [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        [DisplayFormat(DataFormatString = "{0:d MMM yyyy}")]
+        [Display(Name = "Released Date")]
         public DateTime ReleaseDate { get; set; }
         [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        [DisplayFormat(DataFormatString = "{0:d MMM yyyy}")]
+        [Display(Name = "Added Date")]
         public DateTime AddedDate { get; set; }
         [Required]
+        [Display(Name = "Number in Stock")]
         public int Stock { get; set; }
-        [Required]
         public Genre Genre { get; set; }
+        [Required]
+        [Display(Name ="Genre")]
         public byte GenreId { get; set; }
     }
 }

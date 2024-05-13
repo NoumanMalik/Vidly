@@ -6,6 +6,8 @@
 
 <h2>Movies</h2>
 
+@Html.ActionLink("New Movie","New","Movie",null,new {@class = "btn btn-primary mb-3"})
+
 @if (!Model.Any())
 {
     <p>We don't have any movies yet!</p>
@@ -37,13 +39,13 @@ else
             {
                 <tr>
                     <td>
-                        <a href="/Movie/Detail/@movie.Id">@movie.Name</a>
+                        <a href="/Movie/Edit/@movie.Id">@movie.Name</a>
                     </td>
                     <td>
                         @movie.ReleaseDate
                     </td>
                     <td>
-                        @movie.AddedDate
+                        @movie.AddedDate.ToLongDateString()
                     </td>
                     <td>
                         @movie.Stock
