@@ -17,11 +17,15 @@ else
                 <th>
                     Customer Name
                 </th>
+
+                <th>
+                    Membership
+                </th>
                 <th>
                     SingUp Fee
                 </th>
                 <th>
-                    Membership Name
+                    Discount
                 </th>
             </tr>
         </thead>
@@ -30,13 +34,23 @@ else
             {
                 <tr>
                     <td>
-                        @Html.ActionLink(customer.Name, "Detail", "Customer",new { Id = customer.Id},null)
+                        @Html.ActionLink(customer.Name, "Detail", "Customer", new { Id = customer.Id }, null)
                     </td>
                     <td>
-                        @customer.MembershipType.SignUpFee
+                        @customer.MembershipType.Membership
                     </td>
                     <td>
-                        @customer.MembershipType.Name
+                        @if (customer.MembershipType.SignUpFee == 0)
+                        {
+                            <span>Free</span>
+                        }
+                        else
+                        {
+                            <span>$@customer.MembershipType.SignUpFee</span>
+                        }
+                    </td>
+                    <td>
+                        <span>@customer.MembershipType.DiscountRate%</span>
                     </td>
                 </tr>
             }

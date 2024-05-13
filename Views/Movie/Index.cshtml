@@ -18,6 +18,18 @@ else
                 <th>
                     Movies
                 </th>
+                <th>
+                    Release Date
+                </th>
+                <th>
+                    Added Date
+                </th>
+                <th>
+                    Stock
+                </th>
+                <th>
+                    Genre
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +37,19 @@ else
             {
                 <tr>
                     <td>
-                        @movie.Name
+                        <a href="/Movie/Detail/@movie.Id">@movie.Name</a>
+                    </td>
+                    <td>
+                        @movie.ReleaseDate
+                    </td>
+                    <td>
+                        @movie.AddedDate
+                    </td>
+                    <td>
+                        @movie.Stock
+                    </td>
+                    <td>
+                        @movie.Genre.Name
                     </td>
                 </tr>
             }

@@ -212,9 +212,54 @@
     <Compile Include="Migrations\202404261252206_UpdateMembersipType.designer.cs">
       <DependentUpon>202404261252206_UpdateMembersipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404270452513_ChangeColumnNameInMembershipType.cs" />
+    <Compile Include="Migrations\202404270452513_ChangeColumnNameInMembershipType.designer.cs">
+      <DependentUpon>202404270452513_ChangeColumnNameInMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404270455394_UpdateCustomerAndMembershipTypeTable.cs" />
+    <Compile Include="Migrations\202404270455394_UpdateCustomerAndMembershipTypeTable.designer.cs">
+      <DependentUpon>202404270455394_UpdateCustomerAndMembershipTypeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404270509318_AddColumnDateOfBirthInCustomerTable.cs" />
+    <Compile Include="Migrations\202404270509318_AddColumnDateOfBirthInCustomerTable.designer.cs">
+      <DependentUpon>202404270509318_AddColumnDateOfBirthInCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404270519207_AddDataInDateOfBirthColumn.cs" />
+    <Compile Include="Migrations\202404270519207_AddDataInDateOfBirthColumn.designer.cs">
+      <DependentUpon>202404270519207_AddDataInDateOfBirthColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404270531450_UpdateDateOfBirthColumn.cs" />
+    <Compile Include="Migrations\202404270531450_UpdateDateOfBirthColumn.designer.cs">
+      <DependentUpon>202404270531450_UpdateDateOfBirthColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404270538331_UpdateDateInDateOfBirthColumn.cs" />
+    <Compile Include="Migrations\202404270538331_UpdateDateInDateOfBirthColumn.designer.cs">
+      <DependentUpon>202404270538331_UpdateDateInDateOfBirthColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404270626160_AddTableGenreAndAddColumnInMovies.cs" />
+    <Compile Include="Migrations\202404270626160_AddTableGenreAndAddColumnInMovies.designer.cs">
+      <DependentUpon>202404270626160_AddTableGenreAndAddColumnInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404270629329_AddDataInMoviesTable.cs" />
+    <Compile Include="Migrations\202404270629329_AddDataInMoviesTable.designer.cs">
+      <DependentUpon>202404270629329_AddDataInMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404270850502_InsertDataInMoviesTable.cs" />
+    <Compile Include="Migrations\202404270850502_InsertDataInMoviesTable.designer.cs">
+      <DependentUpon>202404270850502_InsertDataInMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405071404069_InsertDataInMovies.cs" />
+    <Compile Include="Migrations\202405071404069_InsertDataInMovies.designer.cs">
+      <DependentUpon>202405071404069_InsertDataInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405071412220_UpdateDateFormatInMovies.cs" />
+    <Compile Include="Migrations\202405071412220_UpdateDateFormatInMovies.designer.cs">
+      <DependentUpon>202405071412220_UpdateDateFormatInMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -298,6 +343,7 @@
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Customer\Detail.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -356,6 +402,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404261252206_UpdateMembersipType.resx">
       <DependentUpon>202404261252206_UpdateMembersipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270452513_ChangeColumnNameInMembershipType.resx">
+      <DependentUpon>202404270452513_ChangeColumnNameInMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270455394_UpdateCustomerAndMembershipTypeTable.resx">
+      <DependentUpon>202404270455394_UpdateCustomerAndMembershipTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270509318_AddColumnDateOfBirthInCustomerTable.resx">
+      <DependentUpon>202404270509318_AddColumnDateOfBirthInCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270519207_AddDataInDateOfBirthColumn.resx">
+      <DependentUpon>202404270519207_AddDataInDateOfBirthColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270531450_UpdateDateOfBirthColumn.resx">
+      <DependentUpon>202404270531450_UpdateDateOfBirthColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270538331_UpdateDateInDateOfBirthColumn.resx">
+      <DependentUpon>202404270538331_UpdateDateInDateOfBirthColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270626160_AddTableGenreAndAddColumnInMovies.resx">
+      <DependentUpon>202404270626160_AddTableGenreAndAddColumnInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270629329_AddDataInMoviesTable.resx">
+      <DependentUpon>202404270629329_AddDataInMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270850502_InsertDataInMoviesTable.resx">
+      <DependentUpon>202404270850502_InsertDataInMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405071404069_InsertDataInMovies.resx">
+      <DependentUpon>202405071404069_InsertDataInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405071412220_UpdateDateFormatInMovies.resx">
+      <DependentUpon>202405071412220_UpdateDateFormatInMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
